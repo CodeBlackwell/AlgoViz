@@ -1,0 +1,40 @@
+$tab-color: #f0f0f0;
+$active-tab-color: #e0e0e0;
+$problem-border: 1px solid #ccc;
+
+.catalog-container {
+  display: flex;
+}
+
+.tabs {
+  width: 150px; // Fixed width for tabs
+  display: flex;
+  flex-direction: column;
+
+  .subject-tab {
+    padding: 10px;
+    background-color: $tab-color;
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+    &.active {
+      background-color: $active-tab-color;
+    }
+  }
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+
+  .problems {
+    display: flex;
+    flex-direction: column;
+
+    .problem {
+      padding: 10px;
+      border: $problem-border;
+      margin: 5px 0;
+    }
+  }
+}
